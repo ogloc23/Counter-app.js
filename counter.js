@@ -15,13 +15,16 @@ decreaseBtn.onclick = function () {
 };
 
 increaseBtn.onclick = function () {
-  if ((count = count + 1)) {
+  if (!count) {
+    count = 0;
   }
+  count = count + 1;
   count_block.textContent = count;
 };
 
 resetBtn.onclick = function () {
-  if ((count = 0)) {
+  if (count > 0) {
+    count = 0;
   }
   count_block.textContent = count;
 };
